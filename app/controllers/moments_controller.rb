@@ -4,7 +4,7 @@ class MomentsController < ApplicationController
   # GET /moments
   # GET /moments.json
   def index
-    @moments = Moment.all
+    @moments = current_user.moments.limit(10).order(:created_at.reverse_order
   end
 
   # GET /moments/1
@@ -58,6 +58,14 @@ class MomentsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to moments_url, notice: 'Moment was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  def process_sms
+    @moment = Moment.create!(body: params[:Body].strip, phone: params[:From], twilio_id: params[:MessageSid])
+    respond_to do |format|
+      format.xml  { head :ok }
+      format.json { head :ok }
     end
   end
 
