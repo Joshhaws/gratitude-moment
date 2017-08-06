@@ -1,25 +1,41 @@
-# SQLite version 3.x
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem 'sqlite3'
-#
-default: &default
-  adapter: sqlite3
-  pool: 5
+<% require "uri" %>
+
+db_config: &db_config
+  <% if ENV["DATABASE_URL"].present? %>
+  <% uri = URI.parse(ENV["DATABASE_URL"]) if ENV["DATABASE_URL"].present? %>
+  username: <%= uri.user %>
+  password: <%= uri.password %>
+  host:     <%= uri.host %>
+  <% else %>
+  username: root
+  password: ''
+  host: localhost
+  <% end %>
+  adapter: mysql2
+  pool: 10
   timeout: 5000
+  port: 3306
 
 development:
-  <<: *default
-  database: db/development.sqlite3
+  <<: *db_config
+  database: gratitude-moment_development
+  encoding: utf8mb4
+  collation: utf8mb4_bin
 
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
 test:
-  <<: *default
-  database: db/test.sqlite3
+  <<: *db_config
+  database: gratitude-moment_test
+  encoding: utf8mb4
+  collation: utf8mb4_bin
+
+staging:
+  <<: *db_config
+  database: gratitude-moment_staging
+  encoding: utf8mb4
+  collation: utf8mb4_bin
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  <<: *db_config
+  database: gratitude-moment_production
+  encoding: utf8mb4
+  collation: utf8mb4_bin

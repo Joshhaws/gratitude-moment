@@ -1,0 +1,27 @@
+h1 Listing moments
+
+table
+  thead
+    tr
+      th User
+      th Phone
+      th Body
+      th Twilio
+      th
+      th
+      th
+
+  tbody
+    - @moments.each do |moment|
+      tr
+        td = moment.user
+        td = moment.phone
+        td = moment.body
+        td = moment.twilio_id
+        td = link_to 'Show', moment
+        td = link_to 'Edit', edit_moment_path(moment)
+        td = link_to 'Destroy', moment, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Moment', new_moment_path

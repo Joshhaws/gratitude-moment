@@ -1,0 +1,18 @@
+p#notice = notice
+
+p
+  strong User:
+  = @moment.user
+p
+  strong Phone:
+  = @moment.phone
+p
+  strong Body:
+  = @moment.body
+p
+  strong Twilio:
+  = @moment.twilio_id
+
+= link_to 'Edit', edit_moment_path(@moment)
+'  |
+= link_to 'Back', moments_path

@@ -1,0 +1,21 @@
+= form_for @moment do |f|
+  - if @moment.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@moment.errors.count, "error")} prohibited this moment from being saved:"
+      ul
+        - @moment.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :user
+    = f.text_field :user
+  .field
+    = f.label :phone
+    = f.text_field :phone
+  .field
+    = f.label :body
+    = f.text_field :body
+  .field
+    = f.label :twilio_id
+    = f.text_field :twilio_id
+  .actions = f.submit
