@@ -18,24 +18,24 @@ db_config: &db_config
 
 development:
   <<: *db_config
-  database: gratitude-moment_development
+  database: gratitude_moment_development
   encoding: utf8mb4
   collation: utf8mb4_bin
 
 test:
   <<: *db_config
-  database: gratitude-moment_test
+  database: gratitude_moment_test
   encoding: utf8mb4
   collation: utf8mb4_bin
 
 staging:
   <<: *db_config
-  database: gratitude-moment_staging
+  database: gratitude_moment_staging
   encoding: utf8mb4
   collation: utf8mb4_bin
 
 production:
   <<: *db_config
-  database: gratitude-moment_production
+  database: gratitude_moment_production
   encoding: utf8mb4
   collation: utf8mb4_bin
