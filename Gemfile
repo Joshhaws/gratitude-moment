@@ -13,6 +13,7 @@ gem 'slim-rails'
 gem 'bcrypt', '~> 3.1.7'
 gem 'delayed_job_active_record'
 gem 'twilio-ruby', '~> 4.2.1'
+gem "js-routes"
 
 
 group :development, :test do

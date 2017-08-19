@@ -1,0 +1,6 @@
+.journal_container
+  = render partial: 'journal_entries'
+
+- if @moments.count < 6
+  .journal_footer_container
+    = render partial: 'journal_footer'

@@ -5,7 +5,15 @@ class MomentsController < ApplicationController
   # GET /moments
   # GET /moments.json
   def index
-    @moments = current_user.moments.limit(5)
+    if params[:journal] = 1
+      @moments = current_user.moments.order('created_at DESC')
+    else
+      @moments = current_user.moments.limit(5).order('created_at DESC')
+    end
+    respond_to do |format|
+      format.js
+      format.html
+    end
   end
 
   # GET /moments/1
@@ -78,6 +86,6 @@ class MomentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def moment_params
-      params.require(:moment).permit(:user_id, :phone, :body, :twilio_id)
+      params.require(:moment).permit(:user_id, :phone, :body, :twilio_id, :viewall)
     end
 end

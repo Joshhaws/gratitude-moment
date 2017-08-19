@@ -1,5 +1,5 @@
 - @moments.each do |moment|
   .moment-container
-    .moment-timestamp = moment.created_at
+    .moment-timestamp = moment.created_at.strftime("%m/%d/%Y %I:%M %p")
     .moment-content = moment.body
   hr
