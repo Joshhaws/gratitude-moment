@@ -2,10 +2,14 @@
   height: 65px;
   background-color: #FA7D62;
   display: flex;
+  a:hover{
+    background-color: #FA7D62;
+  }
   a{
     display: flex;
     .g-circle{
       margin-left: 10px;
+      margin-right: 10px;
       margin-top: auto;
       margin-bottom: auto;
       height: 40px;
