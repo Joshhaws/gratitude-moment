@@ -1,0 +1,62 @@
+.landing {
+  background-color: #FA7D62;
+  height: 700px;
+  margin: -33px;
+  .container-content {
+    padding-top: 40%;
+    .title {
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 25px;
+      padding: 15px 0px;
+      font-size: 32px;
+      font-weight: 500;
+      font-family: 'Coming Soon', cursive;
+    }
+    .circle {
+      margin: auto;
+      display: flex;
+      background-color: #fff;
+      border-radius: 50%;
+      height: 200px;
+      width: 200px;
+      .g-logo{
+        height: 100px;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+    }
+    .container-register{
+      margin-top: 35px;
+      display: flex;
+      justify-content: space-around;
+      .sign-in{
+        background-color:#fff;
+        padding: 15px 30px 10px 30px;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #FFF;
+        background-color: #45C6FF;
+        font-family: 'Coming Soon', cursive;
+        .sign-in-button{
+          color: #fff;
+        }
+      }
+      .sign-up{
+        background-color:#fff;
+        padding: 15px 30px 10px 30px;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #FFF;
+        background-color: #45C6FF;
+        font-family: 'Coming Soon', cursive;
+        .sign-up-button{
+          color: #fff;
+        }
+      }
+    }
+  }
+}
