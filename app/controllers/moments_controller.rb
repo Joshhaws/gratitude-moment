@@ -1,20 +1,23 @@
 class MomentsController < ApplicationController
   before_action :set_moment, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
 
   # GET /moments
   # GET /moments.json
   def index
-    debugger
     if params[:journal] == "1"
       @moments = current_user.moments.order('created_at DESC')
     else
       @moments = current_user.moments.limit(5).order('created_at DESC')
     end
+    @total_moments = current_user.moments
     respond_to do |format|
       format.js
       format.html
     end
+  end
+
+  def viewAll
+
   end
 
   # GET /moments/1

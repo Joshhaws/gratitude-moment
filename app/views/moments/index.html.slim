@@ -1,7 +1,11 @@
 = render partial: 'shared/nav_journal'
 
-.journal-body
-  = render partial: 'journal_body'
+- if @moments.count > 0
+  .journal-body
+    = render partial: 'journal_body'
+- else
+  .journal-body
+    = render partial: 'no_entries'
 
 javascript:
 
