@@ -3,14 +3,18 @@
   background-color: #fff;
   display: flex;
   justify-content: space-between;
-  .g-icon-container{
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 30px;
-    .g-icon{
-      width: 20px;
+  a{
+    display: flex;
+    .g-icon-container{
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: 30px;
+      .g-icon{
+        width: 20px;
+      }
     }
   }
+
   .grateful-for-container{
     margin-top: auto;
     margin-bottom: auto;
@@ -19,12 +23,15 @@
       font-family: 'Coming Soon', cursive;
     }
   }
-  .settings-icon-container{
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 30px;
-    .settings-icon{
-      width: 25px;
+  a{
+    display: flex;
+    .settings-icon-container{
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-right: 30px;
+      .settings-icon{
+        width: 25px;
+      }
     }
   }
 }
