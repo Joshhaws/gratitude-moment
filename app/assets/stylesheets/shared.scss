@@ -1,0 +1,43 @@
+.top-nav{
+  height: 65px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  .g-icon-container{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 30px;
+    .g-icon{
+      width: 20px;
+    }
+  }
+  .grateful-for-container{
+    margin-top: auto;
+    margin-bottom: auto;
+    .grateful-for{
+      font-size: 20px;
+      font-family: 'Coming Soon', cursive;
+    }
+  }
+  .settings-icon-container{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 30px;
+    .settings-icon{
+      width: 25px;
+    }
+  }
+}
+.last-five{
+  height: 65px;
+  background-color: #FA7D62;
+  display: flex;
+  .title{
+    color: #fff;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 20px;
+    font-size: 24px;
+    font-family: 'Coming Soon', cursive;
+  }
+}

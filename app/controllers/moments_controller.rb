@@ -1,10 +1,11 @@
 class MomentsController < ApplicationController
   before_action :set_moment, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
 
   # GET /moments
   # GET /moments.json
   def index
-    @moments = current_user.moments.limit(10).order(:created_at.reverse_order
+    @moments = current_user.moments.limit(5)
   end
 
   # GET /moments/1

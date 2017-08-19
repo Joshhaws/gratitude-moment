@@ -20,6 +20,7 @@
       border-radius: 50%;
       height: 200px;
       width: 200px;
+      box-shadow: 0px 1px 4px;
       .g-logo{
         height: 100px;
         margin-top: auto;
@@ -30,7 +31,7 @@
       margin-top: 35px;
       display: flex;
       justify-content: space-around;
-      .sign-in{
+      .sign-in-button{
         background-color:#fff;
         padding: 15px 30px 10px 30px;
         border-radius: 4px;
@@ -39,11 +40,8 @@
         color: #FFF;
         background-color: #45C6FF;
         font-family: 'Coming Soon', cursive;
-        .sign-in-button{
-          color: #fff;
-        }
       }
-      .sign-up{
+      .sign-up-button{
         background-color:#fff;
         padding: 15px 30px 10px 30px;
         border-radius: 4px;
@@ -52,9 +50,6 @@
         color: #FFF;
         background-color: #45C6FF;
         font-family: 'Coming Soon', cursive;
-        .sign-up-button{
-          color: #fff;
-        }
       }
     }
   }

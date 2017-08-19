@@ -1,3 +1,39 @@
 // Place all the styles related to the moments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.moment-container{
+  margin: 20px;
+  .moment-content{
+    font-size: 14px;
+    color: #676767;
+  }
+  .moment-content{
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 1.25px;
+    color: #676767;
+  }
+}
+hr{
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.journal-footer{
+  display: flex;
+  background-color: #FBFBFB;
+  height: 100px;
+  justify-content: center;
+  .view-all-container{
+    margin-top: auto;
+    margin-bottom: auto;
+    .view-all{
+      padding: 20px 75px;
+      border-radius: 4px;
+      background-color: #EC2C7B;
+      font-size: 18px;
+      color: #FFFFFF;
+      letter-spacing: 3px;
+    }
+  }
+}

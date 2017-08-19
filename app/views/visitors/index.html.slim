@@ -4,7 +4,5 @@
     .circle
       = image_tag 'g.svg', class: 'g-logo'
     .container-register
-      .sign-in 
-        = link_to 'Login', new_user_session_path, class: 'sign-in-button'
-      .sign-up 
-        = link_to 'Signup', new_user_registration_path, class: 'sign-up-button'
+      = link_to 'Login', new_user_session_path, class: 'sign-in-button'
+      = link_to 'Signup', new_user_registration_path, class: 'sign-up-button'
