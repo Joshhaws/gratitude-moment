@@ -5,7 +5,8 @@ class MomentsController < ApplicationController
   # GET /moments
   # GET /moments.json
   def index
-    if params[:journal] = 1
+    debugger
+    if params[:journal] == "1"
       @moments = current_user.moments.order('created_at DESC')
     else
       @moments = current_user.moments.limit(5).order('created_at DESC')
